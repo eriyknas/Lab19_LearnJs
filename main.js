@@ -70,3 +70,73 @@
 //     else if (i === 4) stars = "****";
 //     console.log(stars);
 // }
+
+
+function sum(a, b) {
+    return a + b;
+}
+console.log(sum(3, 5));
+
+
+function multiply(a, b) {
+    return a * b;
+}
+console.log("2 * 5 =", multiply(2, 5));
+
+
+function sayHello(name) {
+    console.log(`Hello, ${name}`);
+}
+sayHello("Тимофей");
+
+
+function printInfo(name, age) {
+    console.log(`Имя: ${name}, Возраст: ${age}`);
+}
+printInfo("Анастасия", 18);
+
+
+function greet(name = "Гость") {
+    console.log("Привет, " + name);
+}
+greet();
+greet("Анастасия");
+
+
+function calculateDiscount(price, discount = 10) {
+    return price - (price * discount / 100);
+}
+console.log("Цена со скидкой 20%:", calculateDiscount(1000, 20));
+console.log("Цена со скидкой:", calculateDiscount(1000));
+
+
+const add = function (a, b) {
+    return a + b;
+};
+console.log(add(2, 3));
+
+
+function makeCounter() {
+    let count = 0;
+    return function() {
+        count++;
+        return count;
+    };
+}
+const counter = makeCounter();
+console.log(counter());
+console.log(counter());
+console.log(counter());
+
+
+function add(a, b) { 
+    return a + b; 
+}
+const sumFunc2 = (a, b) => a + b;
+const double = x => x * 2;
+const sayGreeting = () => console.log("Hello");
+const square = x => x * x;
+const calculate = (a, b) => {
+    let result = a + b;
+    return result * 2;
+};
