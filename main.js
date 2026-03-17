@@ -142,53 +142,124 @@
 // };
 
 
-let numbersArr = [1, 2, 3, 4, 5];
-console.log(numbersArr);
-console.log(numbersArr[0]);
-console.log(numbersArr[1]);
+// let numbersArr = [1, 2, 3, 4, 5];
+// console.log(numbersArr);
+// console.log(numbersArr[0]);
+// console.log(numbersArr[1]);
 
 
-let colors = ["красный", "зеленый", "синий"];
-console.log(colors[0]);
-console.log(colors[colors.length - 1]);
-colors[1] = "желтый";
-console.log(colors);
+// let colors = ["красный", "зеленый", "синий"];
+// console.log(colors[0]);
+// console.log(colors[colors.length - 1]);
+// colors[1] = "желтый";
+// console.log(colors);
 
 
-console.log(numbersArr.length);
-numbersArr.push(10);
-console.log(numbersArr);
-numbersArr.pop();
-console.log(numbersArr);
+// console.log(numbersArr.length);
+// numbersArr.push(10);
+// console.log(numbersArr);
+// numbersArr.pop();
+// console.log(numbersArr);
 
 
-let students = ["Полина", "Никита", "Мария"];
-students.pop();
-console.log(students);
+// let students = ["Полина", "Никита", "Мария"];
+// students.pop();
+// console.log(students);
 
 
-let numbers2 = [10, 20, 30];
-for (let i = 0; i < numbers2.length; i++) {
-    console.log(numbers2[i]);
+// let numbers2 = [10, 20, 30];
+// for (let i = 0; i < numbers2.length; i++) {
+//     console.log(numbers2[i]);
+// }
+// for (let value of numbers2) {
+//     console.log(value);
+// }
+
+
+// let mixedArray = [1, "text", true, 3.14];
+// console.log(mixedArray);
+// console.log(numbersArr.includes(1));
+// console.log(numbersArr.indexOf(2));
+// console.log(fruits.includes("яблоко"));
+// console.log(fruits.includes("манго"));
+
+
+// let cities = ["Москва", "Санкт-Петербург", "Казань", "Новосибирск"];
+// let searchCity = "Казань";
+// let index = cities.indexOf(searchCity);
+// if (index !== -1) {
+//     console.log(`Город ${searchCity} на позиции ${index}`);
+// } else {
+//     console.log(`Город ${searchCity} не найден`);
+// }
+
+
+let user2 = {
+    name: "Ivan",
+    age: 20,
+    isStudent: true,
+    sayHello: function() {
+        console.log(`Hello, my name is ${this.name}`);
+    },
+};
+user2.sayHello();
+console.log(user2);
+console.log(user2.name);
+console.log(user2.age);
+console.log(user2["name"]);
+
+
+let book = {
+    title: "Война и мир",
+    author: "Лев Толстой",
+    year: 1869
+};
+console.log(book.title);
+console.log(book.author);
+console.log(book.year);
+book.year = 2024;
+console.log("Обновлённый год:", book.year);
+
+
+user2.age = 30;
+user2.name = "Кирилл";
+delete user2.isStudent;
+console.log(user2);
+
+
+let car = {
+    brand: "Toyota",
+    year: 2020,
+    getInfo: function() {
+        console.log(`Автомобиль: ${this.brand}, год выпуска: ${this.year}`);
+    }
+};
+car.getInfo();
+
+
+for (let key in user2) {
+    console.log(key + ": " + user2[key]);
 }
-for (let value of numbers2) {
-    console.log(value);
+
+
+let product = {
+    name: "Ноутбук",
+    price: 75000,
+    inStock: true,
+    category: "Электроника"
+};
+for (let prop in product) {
+    console.log(prop + ": " + product[prop]);
 }
 
 
-let mixedArray = [1, "text", true, 3.14];
-console.log(mixedArray);
-console.log(numbersArr.includes(1));
-console.log(numbersArr.indexOf(2));
-console.log(fruits.includes("яблоко"));
-console.log(fruits.includes("манго"));
-
-
-let cities = ["Москва", "Санкт-Петербург", "Казань", "Новосибирск"];
-let searchCity = "Казань";
-let index = cities.indexOf(searchCity);
-if (index !== -1) {
-    console.log(`Город ${searchCity} на позиции ${index}`);
-} else {
-    console.log(`Город ${searchCity} не найден`);
-}
+let student = {
+    name: "Григорий",
+    skills: ["HTML", "CSS", "JS"],
+    address: {
+        city: "Волжский",
+        street: "Пушкина",
+    },
+};
+console.log(student.skills[0]);
+console.log(student.address.city);
