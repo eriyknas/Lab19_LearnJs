@@ -72,71 +72,123 @@
 // }
 
 
-function sum(a, b) {
-    return a + b;
+// function sum(a, b) {
+//     return a + b;
+// }
+// console.log(sum(3, 5));
+
+
+// function multiply(a, b) {
+//     return a * b;
+// }
+// console.log("2 * 5 =", multiply(2, 5));
+
+
+// function sayHello(name) {
+//     console.log(`Hello, ${name}`);
+// }
+// sayHello("Тимофей");
+
+
+// function printInfo(name, age) {
+//     console.log(`Имя: ${name}, Возраст: ${age}`);
+// }
+// printInfo("Анастасия", 18);
+
+
+// function greet(name = "Гость") {
+//     console.log("Привет, " + name);
+// }
+// greet();
+// greet("Анастасия");
+
+
+// function calculateDiscount(price, discount = 10) {
+//     return price - (price * discount / 100);
+// }
+// console.log("Цена со скидкой 20%:", calculateDiscount(1000, 20));
+// console.log("Цена со скидкой:", calculateDiscount(1000));
+
+
+// const add = function (a, b) {
+//     return a + b;
+// };
+// console.log(add(2, 3));
+
+
+// function makeCounter() {
+//     let count = 0;
+//     return function() {
+//         count++;
+//         return count;
+//     };
+// }
+// const counter = makeCounter();
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
+
+// function add(a, b) { 
+//     return a + b; 
+// }
+// const sumFunc2 = (a, b) => a + b;
+// const double = x => x * 2;
+// const sayGreeting = () => console.log("Hello");
+// const square = x => x * x;
+// const calculate = (a, b) => {
+//     let result = a + b;
+//     return result * 2;
+// };
+
+
+let numbersArr = [1, 2, 3, 4, 5];
+console.log(numbersArr);
+console.log(numbersArr[0]);
+console.log(numbersArr[1]);
+
+
+let colors = ["красный", "зеленый", "синий"];
+console.log(colors[0]);
+console.log(colors[colors.length - 1]);
+colors[1] = "желтый";
+console.log(colors);
+
+
+console.log(numbersArr.length);
+numbersArr.push(10);
+console.log(numbersArr);
+numbersArr.pop();
+console.log(numbersArr);
+
+
+let students = ["Полина", "Никита", "Мария"];
+students.pop();
+console.log(students);
+
+
+let numbers2 = [10, 20, 30];
+for (let i = 0; i < numbers2.length; i++) {
+    console.log(numbers2[i]);
 }
-console.log(sum(3, 5));
-
-
-function multiply(a, b) {
-    return a * b;
+for (let value of numbers2) {
+    console.log(value);
 }
-console.log("2 * 5 =", multiply(2, 5));
 
 
-function sayHello(name) {
-    console.log(`Hello, ${name}`);
+let mixedArray = [1, "text", true, 3.14];
+console.log(mixedArray);
+console.log(numbersArr.includes(1));
+console.log(numbersArr.indexOf(2));
+console.log(fruits.includes("яблоко"));
+console.log(fruits.includes("манго"));
+
+
+let cities = ["Москва", "Санкт-Петербург", "Казань", "Новосибирск"];
+let searchCity = "Казань";
+let index = cities.indexOf(searchCity);
+if (index !== -1) {
+    console.log(`Город ${searchCity} на позиции ${index}`);
+} else {
+    console.log(`Город ${searchCity} не найден`);
 }
-sayHello("Тимофей");
-
-
-function printInfo(name, age) {
-    console.log(`Имя: ${name}, Возраст: ${age}`);
-}
-printInfo("Анастасия", 18);
-
-
-function greet(name = "Гость") {
-    console.log("Привет, " + name);
-}
-greet();
-greet("Анастасия");
-
-
-function calculateDiscount(price, discount = 10) {
-    return price - (price * discount / 100);
-}
-console.log("Цена со скидкой 20%:", calculateDiscount(1000, 20));
-console.log("Цена со скидкой:", calculateDiscount(1000));
-
-
-const add = function (a, b) {
-    return a + b;
-};
-console.log(add(2, 3));
-
-
-function makeCounter() {
-    let count = 0;
-    return function() {
-        count++;
-        return count;
-    };
-}
-const counter = makeCounter();
-console.log(counter());
-console.log(counter());
-console.log(counter());
-
-
-function add(a, b) { 
-    return a + b; 
-}
-const sumFunc2 = (a, b) => a + b;
-const double = x => x * 2;
-const sayGreeting = () => console.log("Hello");
-const square = x => x * x;
-const calculate = (a, b) => {
-    let result = a + b;
-    return result * 2;
-};
